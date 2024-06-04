@@ -1,4 +1,6 @@
-# docsify-template
+# My Docsify Website Template
+
+This is a template for creating a docsify-based web application.
 
 ## 1. Developing
 
@@ -12,13 +14,15 @@ For Windows users, you can install of the required and recommended development t
   choco install .\solution.chocolatey.config --confirm
   ```
 
-- .NET 8 SDK
-- PowerShell Core
-- Visual Studio Code
+References:
+
+- <https://www.svgrepo.com/svg/333309/readme>
+- CSS Themes and Colors
+  - <https://dev.to/abbeyperini/dark-mode-toggle-and-prefers-color-scheme-4f3m>
 
 ## 2. Running Locally
 
-While in the [`docs`](docs/) folder, you can use the [`dotnet-serve`](https://github.com/natemcmaster/dotnet-serve) tool to serve the static documentation website locally:
+The documentation is best viewed as a static website (powered by [docsify](https://docsify.js.org/)). To run the documentation website locally, you can run the [`dotnet-serve`](https://github.com/natemcmaster/dotnet-serve) tool:
 
 ```powershell
 dotnet tool restore

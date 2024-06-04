@@ -1,0 +1,26 @@
+:root {
+    --search-flex-order: 1;
+
+    --sidebar-nav-indent: 0.8em;
+    --sidebar-width: 20rem;
+    --sidebar-toggle-height: 36px;
+    --sidebar-toggle-icon-height: 1.2rem;
+    --sidebar-toggle-icon-width: 1.2rem;
+    --sidebar-toggle-offset-left: 0;
+    --sidebar-toggle-offset-top: 0;
+    --sidebar-toggle-width: 36px;
+}
+
+article {
+    overflow-wrap: break-word;
+}
+
+code.lang-regex, code.lang-plaintext, code.lang-powershell {
+    white-space: pre-wrap !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .github-corner{
+        --theme-color: white;
+    }
+}

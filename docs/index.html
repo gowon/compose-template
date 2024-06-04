@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+  <meta name="description" content="A template for creating a docsify-based web application">
+  <title>My Docsify Website Template</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.11/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <!-- Themes (light + dark) -->
+  <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <link rel="stylesheet" media="(prefers-color-scheme: light)" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-pagination@2/src/stylesheet.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div id="app">Please wait...</div>
+  <script>
+    window.$docsify = {
+      coverpage: false,
+      homepage: 'readme.md',
+      repo: 'https://github.com/gowon/docsify-template',
+      name: 'My Docsify Website Template',
+      loadSidebar: true,
+      auto2top: true,
+      autoHeader: true,
+      subMaxLevel: 3,
+      maxLevel: 4,
+      copyCode: {
+        buttonText: 'Copy to clipboard',
+        errorText: 'Error',
+        successText: 'Copied',
+      },
+      mustache: {
+        data: ['assets/vars.json'],
+        noPackage : true
+      },
+      pagination: {
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      search: {
+        paths: 'auto',
+        placeholder: 'Search',
+        noData: 'No Results.',
+      },
+      mermaidConfig: {
+        querySelector: ".mermaid"
+      }
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/front-matter.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@3/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-mustache@1/dist/docsify-mustache.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pdf-embed-plugin@1/src/docsify-pdf-embed.min.js"></script>
+  <!-- Prism language highlighting -->
+  <!-- ref: https://prismjs.com/#supported-languages, https://cdn.jsdelivr.net/npm/prismjs@1/components/ -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-regex.min.js"></script>
+  <!-- Mermaid integration-->
+  <script src="//cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+    window.mermaid = mermaid;
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-mermaid@2/dist/docsify-mermaid.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-mermaid-zoom@3/dist/docsify-mermaid-zoom.min.js"></script>
+  <!-- Progressive Web Application support -->
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', { scope: '/' });
+    }
+  </script>
+</body>
+</html>
